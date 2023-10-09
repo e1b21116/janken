@@ -5,12 +5,12 @@ import java.util.ArrayList;
 /**
  * Spring BootでModelとして扱われるクラス フレームワークがフィールドに値を代入したり，取得したりするため，getter/setterが必要
  */
-public class Score {
+public class janken {
   ArrayList<Double> numList = new ArrayList<>();
   double ave;
 
   // コンストラクタ
-  public Score(ArrayList<Double> numList) {
+  public janken(ArrayList<Double> numList) {
     this.numList = numList;
     double sum = 0;
     for (Double num : numList) {
