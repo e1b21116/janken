@@ -7,7 +7,17 @@
 </head>
 
 <body>
-  <h1>hello</h1>
+  <form action="/sample26" method="post">
+    最小値：<input type="number" name="min"/>
+    最大値：<input type="number" name="max" />
+    <input type="submit" value="計算">
+  </form>
+  <span th:each="num:${sumRange}">
+    [[${num}]]
+  </span>
+  <div>
+    <[[${sum}]]>
+  </div>
 </body>
 
 </html>
