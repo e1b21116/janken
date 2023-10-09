@@ -3,25 +3,24 @@
 
 <head>
   <meta charset="utf-8">
-  <title>janken Sample2-1</title>
+  <title>janken login</title>
 </head>
 
 <body>
-  <h1>Hello GET!</h1>
-  <p>
-  <div>
-    (Sample2-2)
-    <!--thymeleafを利用してjavaから値を受けるとき，ModelMapの変数名を指定のとおりに囲むと良い-->
-    <!--Pathパラメータ-->
-    <a href="/sample22/2/3">2+3</a>=[[${tasuResult1}]]
+  <h1>Janken GAME!</h1>
+  <div th:if="${name}">
+    Hi [[${name}]]
   </div>
-  <div>
-    (Sample2-3)
-    <!--Queryパラメータ-->
-    <a href="/sample23?tasu1=2&tasu2=3">2+3</a>=[[${tasuResult2}]]
+  <a href="/gu">ぐー</a>
+  <a href="/tyoki">ちょき</a>
+  <a href="/pa">ぱー</a>
+  <br>
+  <div th:if="${result}">
+    <p>あなたの手 [[${user}]]</p>
+    <p>相手の手 [[${cpu}]]</p>
+    <p>結果 [[${result}]]</p>
   </div>
-  </p>
-  <a href="/sample24">次のサンプルへ</a>
+
 </body>
 
 </html>
