@@ -2,25 +2,29 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>janken login</title>
+  <title>じゃんけんゲーム</title>
 </head>
 
 <body>
+  <div><a href="/logout">ログアウト</a></div>
   <h1>Janken GAME!</h1>
-  <div th:if="${name}">
-    Hi [[${name}]]
+  <p>エントリー</p>
+  <div th:if="${entry}">
+    <ul>
+      <li th:each="user : ${entry.users}">[[${user}]]</li>
+    </ul>
   </div>
-  <a href="/gu">ぐー</a>
-  <a href="/tyoki">ちょき</a>
-  <a href="/pa">ぱー</a>
-  <br>
-  <div th:if="${result}">
-    <p>あなたの手 [[${user}]]</p>
-    <p>相手の手 [[${cpu}]]</p>
-    <p>結果 [[${result}]]</p>
+  <div th:if="${login_user}">
+    Hi [[${login_user}]]
   </div>
-
+  <a href="/jankengame?hand=Gu">ぐー</a>
+  <a href="/jankengame?hand=Tyo">ちょき</a>
+  <a href="/jankengame?hand=Pa">ぱー</a>
+  <div th:if="${jankenResult}">
+    <p>あなたの手 [[${hand}]]</p>
+    <p>相手の手 Gu</p>
+    <p>結果 [[${jankenResult}]]</p>
+  </div>
 </body>
 
 </html>

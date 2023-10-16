@@ -1,19 +1,23 @@
 package oit.is.z2194.kaizi.janken.model;
 
-public class janken {
-  String name;
+public class Janken {
+  String Result;
 
-  // コンストラクタ
-  public janken(String name) {
-    this.name=name;
+  public Janken(String hand) {
+    if (hand.equals("Gu")) {
+      Result = "Aiko";
+    } else if (hand.equals("Pa")) {
+      Result = "You Win!";
+    } else {
+      Result = "You lose";
+    }
   }
 
-
-  public String getName() {
-    return name;
+  public String getResult() {
+    return Result;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setAve(String Result) {
+    this.Result = Result;
   }
 }
