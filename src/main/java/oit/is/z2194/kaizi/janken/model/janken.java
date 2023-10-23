@@ -1,9 +1,9 @@
 package oit.is.z2194.kaizi.janken.model;
 
-public class Janken {
+public class janken {
   String Result;
 
-  public Janken(String hand) {
+  public janken(String hand) {
     if (hand.equals("Gu")) {
       Result = "Aiko";
     } else if (hand.equals("Pa")) {

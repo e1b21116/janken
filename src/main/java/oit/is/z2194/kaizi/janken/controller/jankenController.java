@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import oit.is.z2194.kaizi.janken.model.Janken;
+import oit.is.z2194.kaizi.janken.model.janken;
 import oit.is.z2194.kaizi.janken.model.Entry;
 
 @Controller
@@ -30,7 +30,7 @@ public class jankenController {
 
   @GetMapping("/jankengame")
   public String jankenGame(@RequestParam String hand, ModelMap model1,ModelMap model2) {
-    Janken jn = new Janken(hand);
+    janken jn = new janken(hand);
     model1.addAttribute("hand", hand);
     model2.addAttribute("jankenResult", jn.getResult());
     return "janken.html";
